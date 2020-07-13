@@ -1,0 +1,50 @@
+html, body {
+    min-height: 100vh;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#garland {
+    display: flex;
+    flex-wrap: wrap;
+}
+#garland > span {
+    width: 108px;
+    height: 116px;
+    position: relative;
+    background: url("../images/lamp.png") no-repeat;
+}
+#garland > span:after {
+    position: absolute;
+    top: -106px;
+    left: calc(50% - 204px);
+    content: "";
+    width: 412px;
+    height: 426px;
+    background: transparent;
+    opacity: 0;
+    transition: all .3s ease;
+}
+#garland > span.red:after{
+    opacity: 1;
+    background: url("../images/bg_light_red.png") no-repeat;
+}
+#garland > span.blue:after {
+    opacity: 1;
+    background: url("../images/bg_light_blue.png") no-repeat;
+}
+#garland > span.yellow:after {
+    opacity: 1;
+    background: url("../images/bg_light_yellow.png") no-repeat;
+}
+#wrapper button {
+    position: relative;
+    z-index: 2;
+}
